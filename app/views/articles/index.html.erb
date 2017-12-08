@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>日報一覧</h1>
+
+<table class="table table-bordered" >
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>宿題（学校・塾）</th>
+      <th>犬の部屋清掃</th>
+      <th>リビング清掃</th>
+      <th>薬を飲む</th>
+      <th>就寝時間</th>
+      <th>洗濯</th>
+      <th>洗濯 残作業有無</th>
+      <th>洗濯たたみ</th>
+      <th>洗濯たたみ 残作業有無</th>
+      <th>困っていること、お願いなど</th>
+      <th>ユーザ</th>
+      <th>承認</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.regist_date %></td>
+        <td><%= article.homework %></td>
+        <td><%= article.clean_dog_room %></td>
+        <td><%= article.clean_living_room %></td>
+        <td><%= article.medicine %></td>
+        <td><%= article.bedtime %></td>
+        <td><%= article.laundry_drying %></td>
+        <td><%= article.laundry_drying_remain %></td>
+        <td><%= article.laundry_tumbling %></td>
+        <td><%= article.laundry_tumbling_remain %></td>
+        <td><%= article.request %></td>
+        <td><%= article.user %></td>
+        <td><%= article.approval_flag  %></td>
+        <td><%= link_to '詳細', article %></td>
+        <td><%= link_to '編集', edit_article_path(article) %></td>
+        <td><%= link_to '削除', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規登録', new_article_path %> |
+<%= link_to 'メインメニュー', current_user %>

@@ -1,0 +1,71 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :日付 %><br>
+    <%= f.date_select :regist_date %>
+  </div>
+  <div class="field">
+    <%= f.label :宿題（学校・塾） %><br>
+    <%= f.select :homework, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :犬の部屋清掃 %><br>
+    <%= f.select :clean_dog_room, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :リビング清掃 %><br>
+    <%= f.select :clean_living_room, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :薬を飲む %><br>
+    <%= f.select :medicine, [["飲まなかった", 0], ["飲んだ", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :就寝時間 %><br>
+    <%= f.datetime_select :bedtime %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯 %><br>
+    <%= f.select :laundry_drying, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯残し %><br>
+    <%= f.select :laundry_drying_remain, [["なし", 0], ["あり", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯たたみ %><br>
+    <%= f.select :laundry_tumbling, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯たたみ残し %><br>
+    <%= f.select :laundry_tumbling_remain, [["なし", 0], ["あり", 1]], :include_blank => true%>
+  </div>
+  <div class="field">
+    <%= f.label :困っていること、お願いなど %><br>
+    <%= f.text_area :request, :size=>"100x10" %>
+  </div>
+  <div class="field">
+    <%= f.label :登録ユーザ %><br>
+    <%= f.text_field :user_id, value: User.find(session[:user_id]).name , :readonly => true %>
+  </div>
+  <% if logged_in_admin? %>
+    <div class="field">
+      <%= f.label :承認 %><br>
+      <%= f.check_box :approval_flag %>
+    </div>
+  <% end %>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

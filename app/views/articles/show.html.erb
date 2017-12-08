@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>日付:</strong>
+  <%= @article.regist_date %>
+</p>
+
+<p>
+  <strong>宿題（学校・塾）:</strong>
+  <%= @article.homework %>
+</p>
+
+<p>
+  <strong>犬の部屋清掃:</strong>
+  <%= @article.clean_dog_room %>
+</p>
+
+<p>
+  <strong>リビング清掃:</strong>
+  <%= @article.clean_living_room %>
+</p>
+
+<p>
+  <strong>薬を飲む:</strong>
+  <%= @article.medicine %>
+</p>
+
+<p>
+  <strong>就寝時間:</strong>
+  <%= @article.bedtime %>
+</p>
+
+<p>
+  <strong>洗濯:</strong>
+  <%= @article.laundry_drying %>
+</p>
+
+<p>
+  <strong>洗濯残し:</strong>
+  <%= @article.laundry_drying_remain %>
+</p>
+
+<p>
+  <strong>洗濯たたみ:</strong>
+  <%= @article.laundry_tumbling %>
+</p>
+
+<p>
+  <strong>洗濯たたみ残し:</strong>
+  <%= @article.laundry_tumbling_remain %>
+</p>
+
+<p>
+  <strong>困っていること、お願いなど:</strong>
+  <%= @article.request %>
+</p>
+
+<p>
+  <strong>登録ユーザ:</strong>
+  <%= @article.user %>
+</p>
+
+<p>
+  <strong>承認:</strong>
+  <%= @article.approval_flag %>
+</p>
+
+<%= link_to '日報編集', edit_article_path(@article) %> |
+<%= link_to '日報一覧へ戻る', articles_path %>

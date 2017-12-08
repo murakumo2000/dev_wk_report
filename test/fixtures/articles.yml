@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regist_date: 2017-10-30
+  homework: 1
+  clean_dog_room: 1
+  clean_living_room: 1
+  medicine: 1
+  bedtime: 2017-10-30 07:38:28
+  laundry_drying: 1
+  laundry_drying_remain: 1
+  laundry_tumbling: 1
+  laundry_tumbling_remain: 1
+  request: MyText
+  user_id: 
+
+two:
+  regist_date: 2017-10-30
+  homework: 1
+  clean_dog_room: 1
+  clean_living_room: 1
+  medicine: 1
+  bedtime: 2017-10-30 07:38:28
+  laundry_drying: 1
+  laundry_drying_remain: 1
+  laundry_tumbling: 1
+  laundry_tumbling_remain: 1
+  request: MyText
+  user_id: 

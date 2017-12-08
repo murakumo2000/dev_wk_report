@@ -1,0 +1,8 @@
+<h1>ユーザ情報編集</h1>
+
+<%= render 'form' %>
+
+<% if logged_in_admin? %>
+   <%= link_to 'ユーザー情報一覧', users_path %> |
+<% end %>
+<%= link_to 'メインメニュー', @user %>
