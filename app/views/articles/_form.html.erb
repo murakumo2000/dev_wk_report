@@ -24,8 +24,32 @@
     <%= f.select :clean_dog_room, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
   </div>
   <div class="field">
+    <%= f.label :犬の部屋清掃_結果1 %><br>
+    <%= f.file_field :clean_dog_room_pic1 %>
+  </div>
+  <div class="field">
+    <%= f.label :犬の部屋清掃_結果2 %><br>
+    <%= f.file_field :clean_dog_room_pic2 %>
+  </div>
+  <div class="field">
+    <%= f.label :犬の部屋清掃_結果3 %><br>
+    <%= f.file_field :clean_dog_room_pic3 %>
+  </div>
+  <div class="field">
     <%= f.label :リビング清掃 %><br>
     <%= f.select :clean_living_room, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :リビング清掃_結果1 %><br>
+    <%= f.file_field :clean_living_room_pic1 %>
+  </div>
+  <div class="field">
+    <%= f.label :リビング清掃_結果2 %><br>
+    <%= f.file_field :clean_living_room_pic2 %>
+  </div>
+  <div class="field">
+    <%= f.label :リビング清掃_結果3 %><br>
+    <%= f.file_field :clean_living_room_pic3 %>
   </div>
   <div class="field">
     <%= f.label :薬を飲む %><br>
@@ -40,12 +64,36 @@
     <%= f.select :laundry_drying, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
   </div>
   <div class="field">
+    <%= f.label :洗濯_結果1 %><br>
+    <%= f.file_field :laundry_drying_pic1 %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯_結果2 %><br>
+    <%= f.file_field :laundry_drying_pic2 %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯_結果3 %><br>
+    <%= f.file_field :laundry_drying_pic3 %>
+  </div>
+  <div class="field">
     <%= f.label :洗濯残し %><br>
     <%= f.select :laundry_drying_remain, [["なし", 0], ["あり", 1]], :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :洗濯たたみ %><br>
     <%= f.select :laundry_tumbling, [["やらなかった", 0], ["やった", 1]], :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯たたみ_結果1 %><br>
+    <%= f.file_field :laundry_tumbling1 %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯たたみ_結果2 %><br>
+    <%= f.file_field :laundry_tumbling2 %>
+  </div>
+  <div class="field">
+    <%= f.label :洗濯たたみ_結果3 %><br>
+    <%= f.file_field :laundry_tumbling3 %>
   </div>
   <div class="field">
     <%= f.label :洗濯たたみ残し %><br>

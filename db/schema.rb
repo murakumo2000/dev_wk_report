@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031051516) do
+ActiveRecord::Schema.define(version: 20180118064120) do
 
   create_table "articles", force: :cascade do |t|
     t.date     "regist_date"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(version: 20171031051516) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "approval_flag"
+    t.string   "clean_dog_room_pic1"
+    t.string   "clean_dog_room_pic2"
+    t.string   "clean_dog_room_pic3"
+    t.string   "clean_living_room_pic1"
+    t.string   "clean_living_room_pic2"
+    t.string   "clean_living_room_pic3"
+    t.string   "laundry_drying_pic1"
+    t.string   "laundry_drying_pic2"
+    t.string   "laundry_drying_pic3"
+    t.string   "laundry_tumbling_pic1"
+    t.string   "laundry_tumbling_pic2"
+    t.string   "laundry_tumbling_pic3"
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"

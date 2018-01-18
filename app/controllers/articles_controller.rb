@@ -69,6 +69,10 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:regist_date, :homework, :clean_dog_room, :clean_living_room, :medicine, :bedtime, :laundry_drying, :laundry_drying_remain, :laundry_tumbling, :laundry_tumbling_remain, :request, :user_id, :approval_flag)
+      params.require(:article).permit(:regist_date, :homework, :clean_dog_room, :clean_living_room, :medicine, :bedtime, :laundry_drying, :laundry_drying_remain, :laundry_tumbling, :laundry_tumbling_remain, :request, :user_id, :approval_flag,
+                     :clean_dog_room_pic1, :clean_dog_room_pic2, :clean_dog_room_pic3,
+                     :clean_living_room_pic1, :clean_living_room_pic2, :clean_living_room_pic3,
+                     :laundry_drying_pic1, :laundry_drying_pic2, :laundry_drying_pic3,
+                     :laundry_tumbling_pic1, :laundry_tumbling_pic2, :laundry_tumbling_pic3)
     end
 end
